@@ -30,7 +30,7 @@ class App extends React.Component {
                 </p>
                 <p>
                     <a
-                        style={{ color: 'blue' }}
+                        style={{ color: 'blue', cursor: 'pointer' }}
                         onClick={this.handleClick}>点击加载jQuery和G2</a>
                 </p>
 
