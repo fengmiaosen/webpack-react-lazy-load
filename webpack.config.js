@@ -2,11 +2,11 @@
  * Created by fengmiaosen on 2017/1/15.
  */
 module.exports = {
-    entry: './main.js',
+    entry: './main',
     output: {
         path: __dirname + '/dist',
         filename: '[name].js',
-        publicPath: '/webpack-react-lazy-load/'
+        publicPath: '/dist/'
     },
     module: {
         loaders: [
@@ -20,4 +20,15 @@ module.exports = {
             }
         ]
     }
+}
+
+// 生产环境配置
+if (process.env.NODE_ENV === 'production') {
+
+    module.exports.output = Object.assign({}, module.exports.output, {
+        filename: '[name].js?[chunkhash:8]',
+        publicPath: '/webpack-react-lazy-load/dist/'
+    });
+
+    module.exports.devtool = '#source-map';
 }
