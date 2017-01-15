@@ -5,7 +5,8 @@ module.exports = {
     entry: './main',
     output: {
         path: __dirname + '/dist',
-        filename: '[name].js'
+        filename: '[name].js',
+        publicPath: '/webpack-react-lazy-load/'
     },
     module: {
         loaders: [
