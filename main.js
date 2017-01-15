@@ -35,7 +35,7 @@ class App extends React.Component {
                 </p>
 
                 <LazilyLoad modules={{
-                    LoadedLate: () => importLazy(require('es6-promise!./js/LoadedLate')())
+                    LoadedLate: () => require('es6-promise!./js/LoadedLate')()
                 }}>
                     {({LoadedLate}) => (
                         <div>

@@ -1,10 +1,15 @@
 /**
  * Created by fengmiaosen on 2017/1/15.
  */
+const path = require('path');
+
 module.exports = {
-    entry: './main',
+    entry: path.resolve(__dirname, 'main.js'),
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
     output: {
-        path: __dirname + '/dist',
+        path: path.resolve(__dirname, 'dist/'),
         filename: '[name].js',
         publicPath: '/dist/'
     },
@@ -17,7 +22,12 @@ module.exports = {
                 query: {
                     presets: ['es2015', 'react']
                 }
-            }
+            },
+            // {
+            //     test: /\.js$/,
+            //     include: [path.resolve(__dirname, '/js/LoadedLate.js')],
+            //     loader: ['es6-promise']
+            // }
         ]
     }
 }
