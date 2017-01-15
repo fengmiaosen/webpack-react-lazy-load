@@ -2,7 +2,7 @@
  * Created by fengmiaosen on 2017/1/15.
  */
 module.exports = {
-    entry: './main',
+    entry: './main.js',
     output: {
         path: __dirname + '/dist',
         filename: '[name].js',
