@@ -2,6 +2,7 @@
  * Created by fengmiaosen on 2017/1/15.
  */
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, 'main.js'),
@@ -37,7 +38,21 @@ module.exports = {
                 loaders: ['es6-promise']
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'index.template.html'
+        })
+    ],
+    // devServer: {
+    //     historyApiFallback: true,
+    //     noInfo: true
+    // },
+    performance: {
+        hints: false
+    },
+    devtool: '#cheap-module-eval-source-map'
 }
 
 // 生产环境配置
