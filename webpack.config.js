@@ -25,6 +25,7 @@ module.exports = {
                 }
             },
             {
+                // 匹配 /lazy/*.js 或者类似 /lazy/components/*.js 两种目录下的js文件
                 test: /lazy\/([^\/]+\/?[^\/]+).js$/,
                 include: path.resolve(__dirname, 'lazy'),
                 loaders: ['es6-promise','babel?presets[]=es2015&presets[]=react']
