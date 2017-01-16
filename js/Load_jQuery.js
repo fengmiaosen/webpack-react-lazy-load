@@ -22,5 +22,6 @@ class Load_jQuery extends React.Component {
 };
 
 export default LazilyLoadFactory(Load_jQuery, {
-    $: () => require('es6-promise?jQuery!jquery')(),
+    // $: () => require('es6-promise?jQuery!jquery')(),
+    $: () => require('jquery')(),
 });

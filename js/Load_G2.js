@@ -41,5 +41,6 @@ class Load_G2 extends React.Component {
 };
 
 export default LazilyLoadFactory(Load_G2, {
-    g2: () => require('es6-promise?g2!g2')(),
+    // g2: () => require('es6-promise?g2!g2')(),
+    g2: () => require('g2')(),
 });

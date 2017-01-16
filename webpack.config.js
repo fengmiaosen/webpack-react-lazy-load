@@ -23,11 +23,19 @@ module.exports = {
                     presets: ['es2015', 'react']
                 }
             },
-            // {
-            //     test: /\.js$/,
-            //     include: [path.resolve(__dirname, '/js/LoadedLate.js')],
-            //     loader: ['es6-promise']
-            // }
+            {
+                test: /lazy\/([^\/]+\/?[^\/]+).js$/,
+                include: path.resolve(__dirname, 'lazy'),
+                loaders: ['es6-promise','babel?presets[]=es2015&presets[]=react']
+            },
+            {
+                test: /g2\/([^\/]+\/?[^\/]+).js$/,
+                loaders: ['es6-promise']
+            },
+            {
+                test: /jquery\/dist\/([^\/]+\/?[^\/]+).js$/,
+                loaders: ['es6-promise']
+            }
         ]
     }
 }

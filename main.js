@@ -26,16 +26,13 @@ class App extends React.Component {
         return (
             <div>
                 <p>
-                    打开chrome控制面板查看Load_jQuery作为一个高阶组件来加载jQuery
-                </p>
-                <p>
                     <a
                         style={{ color: 'blue', cursor: 'pointer' }}
                         onClick={this.handleClick}>点击加载jQuery和G2</a>
                 </p>
 
                 <LazilyLoad modules={{
-                    LoadedLate: () => require('es6-promise!./js/LoadedLate')()
+                    LoadedLate: () => require('./lazy/LoadedLate')()
                 }}>
                     {({LoadedLate}) => (
                         <div>
