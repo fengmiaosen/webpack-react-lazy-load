@@ -47,7 +47,9 @@ module.exports = {
         })
     ],
     // devServer: {
+    //     port: 9000,
     //     historyApiFallback: true,
+    //     contentBase: './dist',
     //     noInfo: true
     // },
     performance: {
